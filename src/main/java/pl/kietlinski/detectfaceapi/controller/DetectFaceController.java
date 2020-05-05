@@ -11,7 +11,7 @@ import pl.kietlinski.detectfaceapi.service.DetectFaceService;
 import java.net.URISyntaxException;
 
 @Controller
-@RequestMapping("/detect-face-api")
+@RequestMapping
 public class DetectFaceController {
 
     private DetectFaceService detectFaceService;
