@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Detector - Detect your face!</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/2234/2234955.svg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="background-container">
+
+    <header>
+        <img src="https://image.flaticon.com/icons/svg/2234/2234955.svg" width="50px" alt="photo">
+        <span style="vertical-align: super; font-weight: bold;">Face Detector</span>
+    </header>
+
+    <!-- First (left, top) container service -->
+    <div class="service-container">
+        <form method="get">
+            <div class="service-container-menu">
+                <input id="url-input" type="text" name="userUrl">
+                <br>
+                <input id="submit-form-button" type="submit" value="DETECT">
+            </div>
+        </form>
+    </div>
+
+    <!-- Pic (right) container -->
+    <div class="pic-container">
+        <div class="pic-container-box">
+            <img th:src="${picUrl}" alt="Face photo" id="img-picUrl">
+        </div>
+    </div>
+
+    <!-- Main (left, bottom) container -->
+    <div class="main-container">
+        <div class="main-container-box">
+            <span class="result-box" th:text="'Wiek: '+${userAge}" style="padding-right: 115px;"></span>
+            <span class="result-box" th:text="'Płeć: '+${userGender}"></span><br>
+            <span th:text="${infoSpan}" style="font-weight: bold;font-size: 25px; text-align: center;"
+                  alt="ATRYBUTY TWARZY"></span><br>
+            <div class="result-box" th:each="attribute : ${showAttributes}">
+                <span th:text="${attribute}"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

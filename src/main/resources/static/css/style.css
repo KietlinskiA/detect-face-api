@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+
+.background-container {
+    background-image: url(https://ocdn.eu/pulscms-transforms/1/lOzktkpTURBXy84NjE4ZGM3OWFjNzkzYzE1MTg2NzhkN2YwM2Y0ZDBmMS5qcGeRlQMAzIzNEZTNCeM);
+    background-size: contain;
+    height: 674px;
+}
+
+header {
+    font-size: 30px;
+    background: linear-gradient(to right, darkgrey 10%, grey 15%, black 22%);
+    padding: 10px 10px 0 10px;
+    border-bottom: 2px black solid;
+}
+
+.service-container {
+    height: 200px;
+    width: 50%;
+    float: left;
+}
+
+.service-container-menu {
+    text-align: center;
+    padding: 25px 0;
+    margin: 50px 100px;
+    border: 3px grey solid;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#url-input {
+    width: 380px;
+    border-radius: 10px;
+    padding: 7px 15px;
+    text-align: center;
+}
+
+#submit-form-button {
+    margin-top: 25px;
+    width: 100px;
+    font-weight: bold;
+    border: 3px gray solid;
+}
+
+#submit-form-button:hover {
+    background-color: gray;
+}
+
+.pic-container {
+    height: 594px;
+    width: 50%;
+    float: right;
+}
+
+.pic-container-box {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 3px black solid;
+    text-align: center;
+    background-color: black;
+}
+
+#img-picUrl {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.main-container {
+    height: 300px;
+    width: 50%;
+    float: left;
+}
+
+.main-container-box {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 20px;
+    padding: 30px 30px;
+    min-height: 290px;
+    margin: 0 100px;
+    border: 3px gray solid;
+}
+
+.result-box {
+    padding-bottom: 10px;
+}
