@@ -2,7 +2,7 @@
 ## At first...
 This is my non-profit project to training Spring Boot.
 
-![App image](src/main/resources/img/example1.png)
+![App image](src/main/resources/static/img/example1.png)
 
 ## 1. Table of contents
 * [General info](#2-general-info)
@@ -17,11 +17,11 @@ Under first container we have results: age, gender and next to all face attribut
 
 If your pic is not blurry app return results:
 
-![App image](src/main/resources/img/example2.png)
+![App image](src/main/resources/static/img/example2.png)
 
 If pic is unreadable we get information about it:
 
-![App image](src/main/resources/img/example3.png)
+![App image](src/main/resources/static/img/example3.png)
 
 App is deploy on heroku.com: -
 

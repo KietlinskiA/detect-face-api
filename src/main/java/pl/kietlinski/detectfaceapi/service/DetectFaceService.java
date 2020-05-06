@@ -15,6 +15,10 @@ import pl.kietlinski.detectfaceapi.model.DetectFaceModels.FaceAttributes;
 import pl.kietlinski.detectfaceapi.model.DetectFaceModels.Hair;
 import pl.kietlinski.detectfaceapi.model.DetectFaceModels.HairColor;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.net.URI;
@@ -45,17 +49,21 @@ public class DetectFaceService {
     }
 
     public void getFaceAttributes(String userUrl) throws URISyntaxException {
+        System.out.println("=====================================");
         ResponseEntity<DetectFace[]> detectFaceObject = restTemplate.exchange(
                 getApiUri(),
                 HttpMethod.POST,
                 getBodyAndHeaders(userUrl),
                 DetectFace[].class
         );
+        System.out.println("=====================================");
+        System.out.println("====================================="+detectFaceObject.getStatusCodeValue());
         if (!faceAttributesList.isEmpty()) {
             faceAttributesList.clear();
         }
-
-        if (detectFaceObject.getBody() == null || detectFaceObject.getBody().length < 1) {
+        if (detectFaceObject.getStatusCodeValue() == 400) {
+            setInfoSpan("ZŁY ADRES ZDJĘCIA");
+        } else if (detectFaceObject.getBody() == null || detectFaceObject.getBody().length < 1) {
             getUncorrectUrlStatus();
         } else {
             FaceAttributes faceAttributes = detectFaceObject.getBody()[0].getFaceAttributes();
