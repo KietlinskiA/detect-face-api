@@ -23,7 +23,7 @@ If pic is unreadable we get information about it:
 
 ![App image](src/main/resources/img/example3.png)
 
-App is deploy on heroku.com: -
+App is deploy on heroku.com: https://face-detector-ak.herokuapp.com/
 
 ## 3. Technologies
 Project is created with:
